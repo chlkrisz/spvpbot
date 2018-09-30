@@ -7,7 +7,7 @@ client.on("ready", () => {
  // client.user.setActivity(`Serving ${client.guilds.size} servers`);
     client.user.setStatus('dnd', '');
     client.user.setActivity("say !help", {
-     type: "LISTENING",
+     type: "WATCHING",
      url: "https://www.twitch.tv/chlkrisz"
     });
 });
@@ -24,8 +24,16 @@ client.on("message", async message => {
 if(command === "generate") {
   message.channel.send("**Szám generálása 0 és 1000 között...**");
   message.author.send("An SSL error has occurred and a secure connection to the server cannot be made.");
-  }
+ }
 
+if(command === "join") {
+    const channel = message.member.voiceChannel;
+    channel.join()
+    .then(connection => console.log('Connected!'))
+    .catch(console.error);
+  
+}
+  
 if(command === "help") {
    message.channel.send("**HIBA!** *0*");
  }
