@@ -32,4 +32,8 @@ if(command === "generate") {
   }
 });
 
+if(command === "help") {
+  message.channel.send("**HIBA!** 0");
+  }
+});
   client.login(config.token);
