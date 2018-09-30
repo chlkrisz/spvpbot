@@ -7,14 +7,12 @@ client.on("ready", () => {
  // client.user.setActivity(`Serving ${client.guilds.size} servers`);
     client.user.setStatus('dnd', '');
     client.user.setActivity("say !help", {
-     type: "WATCHING"
+     type: "LISTENING"
     });
 });
 
 function altgen() {
-  var rand = ['RekterMansy125','BingoCat403','SS.UBB.SSC.RRI.BBE'];
-
-  return rand[Math.floor(Math.random()*rand.length)];
+  return rand[Math.floor(Math.random() * 1000)];
 }
 
 client.on("message", async message => {
@@ -27,7 +25,7 @@ client.on("message", async message => {
   const command = args.shift().toLowerCase();
 
 if(command === "generate") {
-  message.channel.send("**Generating alts...**");
+  message.channel.send("**Szám generálása 0 és 1000 között...**");
     message.author.send(altgen());
   }
 
