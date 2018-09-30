@@ -5,7 +5,7 @@ const config = require("./config.json");
 client.on("ready", () => {
   console.log(`Bot has started, with ${client.users.size} users, in ${client.channels.size} channels of ${client.guilds.size} guilds.`);
  // client.user.setActivity(`Serving ${client.guilds.size} servers`);
-    client.user.setStatus('dnd', '');
+    client.user.setStatus('idle', '');
     client.user.setActivity("say !help", {
      type: "LISTENING",
      url: "https://www.twitch.tv/chlkrisz"
@@ -21,59 +21,13 @@ client.on("message", async message => {
   const args = message.content.slice(config.prefix.length).trim().split(/ +/g);
   const command = args.shift().toLowerCase();
 
-if(command === "generate") {
-  message.channel.send("**Szám generálása 0 és 1000 között...**");
-  message.author.send("An SSL error has occurred and a secure connection to the server cannot be made.");
- }
+
+  
+  
 
 if(command === "tre") {
-const embed = {
-  "title": "title ~~(did you know you can have markdown here too?)~~",
-  "description": "this supports [named links](https://discordapp.com) on top of the previously shown subset of markdown. ```\nyes, even code blocks```",
-  "url": "https://discordapp.com",
-  "color": 6500106,
-  "timestamp": "2018-09-30T19:24:27.750Z",
-  "footer": {
-    "icon_url": "https://cdn.discordapp.com/embed/avatars/0.png",
-    "text": "footer text"
-  },
-  "thumbnail": {
-    "url": "https://cdn.discordapp.com/embed/avatars/0.png"
-  },
-  "image": {
-    "url": "https://cdn.discordapp.com/embed/avatars/0.png"
-  },
-  "author": {
-    "name": "author name",
-    "url": "https://discordapp.com",
-    "icon_url": "https://cdn.discordapp.com/embed/avatars/0.png"
-  },
-  "fields": [
-    {
-      "name": "🤔",
-      "value": "some of these properties have certain limits..."
-    },
-    {
-      "name": "😱",
-      "value": "try exceeding some of them!"
-    },
-    {
-      "name": "🙄",
-      "value": "an informative error should show up, and this view will remain as-is until all issues are fixed"
-    },
-    {
-      "name": "<:thonkang:219069250692841473>",
-      "value": "these last two",
-      "inline": true
-    },
-    {
-      "name": "<:thonkang:219069250692841473>",
-      "value": "are inline fields",
-      "inline": true
-    }
-  ]
-};
-message.channel.send("this `supports` __a__ **subset** *of* ~~markdown~~ 😃 ```js\nfunction foo(bar) {\n  console.log(bar);\n}\n\nfoo(1);```", { embed });
+  
+message.channel.send("Jelenleg ez ki van törölve, bocsesz! ***-CHLKRISZ***");
   
 }
   
@@ -87,7 +41,7 @@ message.channel.send({embed: {
     description: "Jelenleg a segítség panel munkálatok alatt van!",
     timestamp: new Date(),
     footer: {
-      icon_url: client.user.avatarURL,
+      icon_url: "https://www.adorama.com/images/Large/ro25.jpg",
       text: "© SkyPVP Bot"
     }
   }
