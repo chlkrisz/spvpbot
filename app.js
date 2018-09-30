@@ -7,7 +7,7 @@ client.on("ready", () => {
  // client.user.setActivity(`Serving ${client.guilds.size} servers`);
     client.user.setStatus('idle', '');
     client.user.setActivity("say !help", {
-     type: "PLAYING"
+     type: "INVISIBLE"
     });
 });
 
