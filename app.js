@@ -6,7 +6,7 @@ client.on("ready", () => {
   console.log(`Bot has started, with ${client.users.size} users, in ${client.channels.size} channels of ${client.guilds.size} guilds.`);
  // client.user.setActivity(`Serving ${client.guilds.size} servers`);
     client.user.setStatus('dnd', '');
-    client.user.setActivity("say !help dont try !join", {
+    client.user.setActivity("say !help | try !join", {
      type: "LISTENING",
      url: "https://www.twitch.tv/chlkrisz"
     });
@@ -50,7 +50,7 @@ if(command === "join") {
   // Play files natively
   voiceChannel.join()
   .then(connection => {
-    const dispatcher = connection.playFile('test.mp3');
+    const dispatcher = connection.playFile('khm1.mp3');
   })
   .catch(console.error);
   
