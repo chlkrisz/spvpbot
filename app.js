@@ -7,7 +7,7 @@ client.on("ready", () => {
  // client.user.setActivity(`Serving ${client.guilds.size} servers`);
     client.user.setStatus('online', '');
     client.user.setActivity("say !help", {
-     type: "STREAMING",
+     type: "LISTENING",
      url: "https://www.twitch.tv/chlkrisz"
     });
 });
@@ -45,11 +45,5 @@ message.channel.send({embed: {
     }
   }
 });
-  
-if(command === "kaki") {
-  message.send("Easter Egg! \:poop:")
-  
-};
- }
 });
   client.login(config.token);
