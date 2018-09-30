@@ -30,10 +30,9 @@ if(command === "generate") {
   message.channel.send("**Generating alts...**");
     message.author.send(altgen());
   }
-});
 
 if(command === "help") {
-  message.channel.send("**HIBA!** 0");
-  }
+   message.channel.send("**HIBA!** 0");
+ }
 });
   client.login(config.token);
