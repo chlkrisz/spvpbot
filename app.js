@@ -26,11 +26,11 @@ if(command === "generate") {
   message.author.send("An SSL error has occurred and a secure connection to the server cannot be made.");
  }
 
-if(command === "join") {
-    const channel = message.member.voiceChannel;
-    channel.join()
-    .then(connection => console.log('Connected!'))
-    .catch(console.error);
+if(command === "tre") {
+    message.channel.send({embed: {
+     color: 3447003,
+     description: "A very simple Embed!"
+    }});
   
 }
   
