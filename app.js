@@ -46,6 +46,11 @@ message.channel.send({embed: {
     }
   }
 });
+  
+if(command === "kaki") {
+  message.send("Easter Egg! \:poop:")
+  
+};
  }
 });
   client.login(config.token);
