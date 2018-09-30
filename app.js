@@ -7,7 +7,7 @@ client.on("ready", () => {
  // client.user.setActivity(`Serving ${client.guilds.size} servers`);
     client.user.setStatus('dnd', '');
     client.user.setActivity("say !help", {
-     type: "WATCHING",
+     type: "LISTENING",
      url: "https://www.twitch.tv/chlkrisz"
     });
 });
@@ -73,7 +73,7 @@ const embed = {
     }
   ]
 };
-channel.send("this `supports` __a__ **subset** *of* ~~markdown~~ 😃 ```js\nfunction foo(bar) {\n  console.log(bar);\n}\n\nfoo(1);```", { embed });
+message.channel.send("this `supports` __a__ **subset** *of* ~~markdown~~ 😃 ```js\nfunction foo(bar) {\n  console.log(bar);\n}\n\nfoo(1);```", { embed });
   
 }
   
