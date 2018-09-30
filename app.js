@@ -7,7 +7,7 @@ client.on("ready", () => {
  // client.user.setActivity(`Serving ${client.guilds.size} servers`);
     client.user.setStatus('dnd', '');
     client.user.setActivity("say !help", {
-     type: "STREAMING",
+     type: "WATCHING",
      url: "https://www.twitch.tv/chlkrisz"
     });
 });
