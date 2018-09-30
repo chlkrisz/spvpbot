@@ -5,15 +5,11 @@ const config = require("./config.json");
 client.on("ready", () => {
   console.log(`Bot has started, with ${client.users.size} users, in ${client.channels.size} channels of ${client.guilds.size} guilds.`);
  // client.user.setActivity(`Serving ${client.guilds.size} servers`);
-    client.user.setStatus('dnd', '');
+    client.user.setStatus('idle', '');
     client.user.setActivity("say !help", {
-     type: "LISTENING"
+     type: "PLAYING"
     });
 });
-
-function altgen() {
-  return rand[Math.floor(Math.random() * 1000)];
-}
 
 client.on("message", async message => {
 
@@ -26,7 +22,7 @@ client.on("message", async message => {
 
 if(command === "generate") {
   message.channel.send("**Szám generálása 0 és 1000 között...**");
-    message.author.send(altgen());
+  message.author.send("An SSL error has occurred and a secure connection to the server cannot be made.");
   }
 
 if(command === "help") {
