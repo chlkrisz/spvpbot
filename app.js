@@ -8,7 +8,7 @@ client.on("ready", () => {
     client.user.setStatus('dnd', '');
     client.user.setActivity("say !help", {
      type: "STREAMING",
-     link: "https://www.twitch.tv/chlkrisz"
+     url: "https://www.twitch.tv/chlkrisz"
     });
 });
 
