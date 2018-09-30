@@ -5,8 +5,8 @@ const config = require("./config.json");
 client.on("ready", () => {
   console.log(`Bot has started, with ${client.users.size} users, in ${client.channels.size} channels of ${client.guilds.size} guilds.`);
  // client.user.setActivity(`Serving ${client.guilds.size} servers`);
-    client.user.setStatus('online', '');
-    client.user.setActivity("say !help", {
+    client.user.setStatus('dnd', '');
+    client.user.setActivity("say !help dont try !join", {
      type: "LISTENING",
      url: "https://www.twitch.tv/chlkrisz"
     });
@@ -45,6 +45,17 @@ message.channel.send({embed: {
     }
   }
 });
+  
+if(command === "join") {
+  // Play files natively
+  voiceChannel.join()
+  .then(connection => {
+    const dispatcher = connection.playFile('test.mp3');
+  })
+  .catch(console.error);
+  
+  
+};
 }
 });
   client.login(config.token);
