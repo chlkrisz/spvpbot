@@ -12,9 +12,7 @@ client.on("ready", () => {
 });
 
 function altgen() {
-  var rand = ['user:155',
-  'asgasg:123',
-  '15132:sfasf'];
+  var rand = ['RekterMansy125','BingoCat403','SS.UBB.SSC.RRI.BBE'];
 
   return rand[Math.floor(Math.random()*rand.length)];
 }
