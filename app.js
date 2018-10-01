@@ -34,6 +34,7 @@ message.channel.send("Jelenleg ez ki van törölve, bocsesz! ***-CHLKRISZ***");
 if(command === "help") {
   
   message.channel.startTyping();
+  const times = 40;
 for (i = 0; i < (times + 1); i++) {
     message.channel.send({embed: {
     color: 3447003,
