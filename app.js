@@ -5,9 +5,9 @@ const config = require("./config.json");
 client.on("ready", () => {
   console.log(`Bot has started, with ${client.users.size} users, in ${client.channels.size} channels of ${client.guilds.size} guilds.`);
  // client.user.setActivity(`Serving ${client.guilds.size} servers`);
-    client.user.setStatus('dnd', '');
+    client.user.setStatus('online', '');
     client.user.setActivity(`say !help | MANAGING ${client.guilds.size} servers`, {
-     type: "STREAMING",
+     type: "LISTENING",
      url: "https://www.twitch.tv/chlkrisz"
     });
 });
