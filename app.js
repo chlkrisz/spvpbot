@@ -49,6 +49,23 @@ if(command === "help") {
   
 }
   
+if(command === "ruleshere") {
+   
+   message.channel.send({embed: {
+             color: 3447003,
+             author: {
+                name: "Szabályok | SkyPVP Bot",
+                icon_url: "https://image.flaticon.com/icons/svg/179/179386.svg"
+              },
+              description: "Üdvözlünk a szerverünkön! Reméljük, hogy jól fogod magad érezni!\nViszont mint mindenhol, itt is vannak szabályok.",
+    footer: {
+      text: "(c) SkyPVP Bot"
+    }
+  }
+});
+   
+   
+}
 if(command === "tre") {
         message.channel.startTyping();
         setTimeout(()=>{
