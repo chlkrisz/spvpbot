@@ -28,12 +28,24 @@ client.on("message", async message => {
   
 if(command === "help") {
   
-
-  const times = 40;
-for (i = 0; i < (times + 1); i++) {
-    message.channel.startTyping();
-}
-
+        message.channel.startTyping();
+        setTimeout(()=>{
+            message.channel.send({embed: {
+             color: 3447003,
+             author: {
+                name: "Segítség | SkyPVP Bot",
+                icon_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Pictogram_voting_question.svg/220px-Pictogram_voting_question.svg.png"
+              },
+              description: "Ez a panel kódolás alatt van!",
+    timestamp: new Date(),
+    footer: {
+      icon_url: message.author.displayAvatarURL,
+      text: "Kérte: " + message.author.setAuthor
+    }
+  }
+});
+            message.channel.stopTyping();
+        },200)
   
 }
   
