@@ -7,7 +7,7 @@ client.on("ready", () => {
  // client.user.setActivity(`Serving ${client.guilds.size} servers`);
     client.user.setStatus('idle', '');
     client.user.setActivity(`say !help | MANAGING ${client.guilds.size} servers`, {
-     type: "WATCHING",
+     type: "STREAMING",
      url: "https://www.twitch.tv/chlkrisz"
     });
 });
@@ -40,7 +40,7 @@ for (i = 0; i < (times + 1); i++) {
 }
 if (i = 39) {
   message.channel.stopTyping();
-message.channel.send({embed: {
+  message.channel.send({embed: {
     color: 3447003,
     author: {
       name: "Segítség",
@@ -53,8 +53,6 @@ message.channel.send({embed: {
     }
   }
 });
-}
-
 }
   
 if(command === "join") {
