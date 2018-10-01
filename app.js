@@ -38,7 +38,8 @@ if(command === "help") {
 for (i = 0; i < (times + 1); i++) {
     message.channel.startTyping();
 }
-message.channel.stopTyping();
+if (i = 39) {
+  message.channel.stopTyping();
 message.channel.send({embed: {
     color: 3447003,
     author: {
@@ -52,7 +53,9 @@ message.channel.send({embed: {
     }
   }
 });
+}
 
+}
   
 if(command === "join") {
   // Play files natively
