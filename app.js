@@ -6,7 +6,7 @@ client.on("ready", () => {
   console.log(`Bot has started, with ${client.users.size} users, in ${client.channels.size} channels of ${client.guilds.size} guilds.`);
  // client.user.setActivity(`Serving ${client.guilds.size} servers`);
     client.user.setStatus('idle', '');
-    client.user.setActivity(`say !help | ${client.guilds.size} db szerveren elérhető`, {
+    client.user.setActivity(`say !help | MANAGING ${client.guilds.size} servers`, {
      type: "WATCHING",
      url: "https://www.twitch.tv/chlkrisz"
     });
