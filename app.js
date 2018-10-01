@@ -7,7 +7,7 @@ client.on("ready", () => {
  // client.user.setActivity(`Serving ${client.guilds.size} servers`);
     client.user.setStatus('dnd', '');
     client.user.setActivity(`say !help | MANAGING ${client.guilds.size} servers`, {
-     type: "LISTENING",
+     type: "WATCHING",
      url: "https://www.twitch.tv/chlkrisz"
     });
 });
@@ -40,7 +40,7 @@ if(command === "help") {
     timestamp: new Date(),
     footer: {
       icon_url: message.author.displayAvatarURL,
-      text: "Kérte: " + message.author.setAuthor
+      text: "Kérte: " + message.author.displayName
     }
   }
 });
