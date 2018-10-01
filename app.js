@@ -25,11 +25,6 @@ client.on("message", async message => {
   
   
 
-if(command === "tre") {
-  
-message.channel.send("Jelenleg ez ki van törölve, bocsesz! ***-CHLKRISZ***");
-  
-}
   
 if(command === "help") {
   
