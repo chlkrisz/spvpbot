@@ -32,7 +32,10 @@ message.channel.send("Jelenleg ez ki van törölve, bocsesz! ***-CHLKRISZ***");
 }
   
 if(command === "help") {
-message.channel.send({embed: {
+  
+  message.channel.startTyping();
+for (i = 0; i < (times + 1); i++) {
+    message.channel.send({embed: {
     color: 3447003,
     author: {
       name: "Segítség",
@@ -45,6 +48,9 @@ message.channel.send({embed: {
     }
   }
 });
+}
+message.channel.stopTyping();
+
   
 if(command === "join") {
   // Play files natively
