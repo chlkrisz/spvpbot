@@ -38,33 +38,16 @@ if(command === "help") {
 for (i = 0; i < (times + 1); i++) {
     message.channel.startTyping();
 }
-if (i = 39) {
-  message.channel.stopTyping();
-  message.channel.send({embed: {
-    color: 3447003,
-    author: {
-      name: "Segítség",
-      icon_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Pictogram_voting_question.svg/220px-Pictogram_voting_question.svg.png"
-    },
-    description: "Jelenleg a segítség panel munkálatok alatt van!",
-    timestamp: new Date(),
-    footer: {
-      text: "© SkyPVP Bot"
-    }
-  }
-});
+
+  
 }
   
-if(command === "join") {
-  // Play files natively
-  voiceChannel.join()
-  .then(connection => {
-    const dispatcher = connection.playFile('khm1.mp3');
-  })
-  .catch(console.error);
-  
-  
-};
+if(command === "tre") {
+        message.channel.startTyping();
+        setTimeout(()=>{
+            message.channel.send("Testing to ForeverTyping!");
+            message.channel.stopTyping();
+        },2000)
 }
 });
   client.login(config.token);
