@@ -7,7 +7,7 @@ client.on("ready", () => {
  // client.user.setActivity(`Serving ${client.guilds.size} servers`);
     client.user.setStatus('dnd', '');
     client.user.setActivity(`say !help | MANAGING ${client.guilds.size} servers`, {
-     type: "PLAYING",
+     type: "WATCHING",
      url: "https://www.twitch.tv/chlkrisz"
     });
 });
@@ -33,10 +33,13 @@ message.channel.send("Jelenleg ez ki van törölve, bocsesz! ***-CHLKRISZ***");
   
 if(command === "help") {
   
-  message.channel.startTyping();
+
   const times = 40;
 for (i = 0; i < (times + 1); i++) {
-    message.channel.send({embed: {
+    message.channel.startTyping();
+}
+message.channel.stopTyping();
+message.channel.send({embed: {
     color: 3447003,
     author: {
       name: "Segítség",
@@ -49,8 +52,6 @@ for (i = 0; i < (times + 1); i++) {
     }
   }
 });
-}
-message.channel.stopTyping();
 
   
 if(command === "join") {
