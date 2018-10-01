@@ -5,9 +5,9 @@ const config = require("./config.json");
 client.on("ready", () => {
   console.log(`Bot has started, with ${client.users.size} users, in ${client.channels.size} channels of ${client.guilds.size} guilds.`);
  // client.user.setActivity(`Serving ${client.guilds.size} servers`);
-    client.user.setStatus('online', '');
+    client.user.setStatus('idle', '');
     client.user.setActivity(`say !help | MANAGING ${client.guilds.size} servers`, {
-     type: "LISTENING",
+     type: "WATCHING",
      url: "https://www.twitch.tv/chlkrisz"
     });
 });
@@ -55,7 +55,7 @@ if(command === "ruleshere") {
              color: 3447003,
              author: {
                 name: "Szabályok | SkyPVP Bot",
-                icon_url: "https://image.flaticon.com/icons/svg/179/179386.svg"
+                icon_url: "http://users.atw.hu/kankutya/pictures/179386.png"
               },
               description: "Üdvözlünk a szerverünkön! Reméljük, hogy jól fogod magad érezni!\nViszont mint mindenhol, itt is vannak szabályok.",
     footer: {
