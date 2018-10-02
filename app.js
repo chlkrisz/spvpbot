@@ -5,9 +5,9 @@ const config = require("./config.json");
 client.on("ready", () => {
   console.log(`Bot has started, with ${client.users.size} users, in ${client.channels.size} channels of ${client.guilds.size} guilds.`);
  // client.user.setActivity(`Serving ${client.guilds.size} servers`);
-    client.user.setStatus('idle', '');
+    client.user.setStatus('dnd', '');
     client.user.setActivity(`say !help | MANAGING ${client.guilds.size} servers`, {
-     type: "LISTENING",
+     type: "WATCHNING",
      url: "https://www.twitch.tv/chlkrisz"
     });
 });
@@ -57,10 +57,10 @@ if(command === "ruleshere") {
                 name: "Szabályok | SkyPVP Bot",
                 icon_url: "http://users.atw.hu/kankutya/pictures/179386.png"
               },
-              description: "Üdvözlünk a szerverünkön! Reméljük, hogy jól fogod magad érezni!\nViszont mint mindenhol, itt is vannak szabályok.",
+              description: "Üdvözlünk a szerverünkön! \:tada:\:hugging: Reméljük, hogy jól fogod magad érezni!\n\:exclamation: Viszont mint mindenhol, itt is vannak szabályok. \:exclamation:",
     fields: [{
         name: "1. szabály",
-        value: "Ne beszélj csúnyán!\nNem szeretjük a csúnya beszédet, kérünk, te se beszélj csúnyán! :)"
+        value: "Ne beszélj csúnyán!\nNem szeretjük a csúnya beszédet, kérünk, te se beszélj csúnyán! \:smiley:"
       },
     {
         name: "2. szabály",
