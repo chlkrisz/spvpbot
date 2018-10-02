@@ -3,7 +3,7 @@ const client = new Discord.Client();
 const config = require("./config.json");
 const hook = new Discord.WebhookClient('496755807644287013', 'EyAHkCwQycVEdvm2UWtmkZ0JF8j7tHeTrzjaluQzGPHJEuTHHbhKcJEvI6oRrnouXF-o');
 
-hook.say ('A SkyPVP Bot sikeresen újra lett indítva! \:wink:')
+hook.send ('A SkyPVP Bot sikeresen újra lett indítva! \:wink:')
 
 client.on("ready", () => {
   console.log(`Bot has started, with ${client.users.size} users, in ${client.channels.size} channels of ${client.guilds.size} guilds.`);
