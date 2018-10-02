@@ -8,7 +8,7 @@ client.on("ready", () => {
  // client.user.setActivity(`Serving ${client.guilds.size} servers`);
     client.user.setStatus('idle', '');
     client.user.setActivity(`say !help | MANAGING ${client.guilds.size} servers`, {
-     type: "WATCHING",
+     type: "LISTENING",
      url: "https://www.twitch.tv/chlkrisz"
     });
 });
@@ -21,14 +21,6 @@ client.on("message", async message => {
 
   const args = message.content.slice(config.prefix.length).trim().split(/ +/g);
   const command = args.shift().toLowerCase();
-
-if(command === "hirek_say") {
-  message.delete()
-  const hir = new Discord.RichEmbed()
-  .setColor(0x954D23)
-  .setDescription("@everyone " + message.author.username + "hírként posztolta: " + args.join(" "))
-  hook.send({hir})
-}
   
 if(command === "help") {
   
