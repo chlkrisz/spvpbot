@@ -7,7 +7,7 @@ client.on("ready", () => {
  // client.user.setActivity(`Serving ${client.guilds.size} servers`);
     client.user.setStatus('dnd', '');
     client.user.setActivity(`say !help | MANAGING ${client.guilds.size} servers`, {
-     type: "WATCHING",
+     type: "LISTENING",
      url: "https://www.twitch.tv/chlkrisz"
     });
 });
@@ -60,9 +60,18 @@ if(command === "ruleshere") {
       },
     {
         name: "2. szabály",
-        value: "Ne reklámozz szervereket!\nKérünk, hogy ne reklámozd a saját, vagy más szerverét!"
-      }
+        value: "Ne reklámozz szervereket!\nKérünk, hogy ne reklámozd a saját, vagy más szerverét! \:wink:"
+      },
+    {
+        name: "3. szabály",
+        value: "Ne szidd a tagokat!\nA szidásban lehet csúnya beszéd, ezért talán még kettő szabályt is képes vagy egyszerre megszegni! \:open_mouth:"
+    },   
+    {
+        name: "Jó szórakozást kívánunk!",
+        value: "Ha nem viselkedsz jól, /ban \:kappa_nitro:"
+      } 
     ],
+    
     footer: {
       text: "(c) SkyPVP Bot"
     }
