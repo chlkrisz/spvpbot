@@ -7,7 +7,7 @@ client.on("ready", () => {
  // client.user.setActivity(`Serving ${client.guilds.size} servers`);
     client.user.setStatus('idle', '');
     client.user.setActivity(`say !help | MANAGING ${client.guilds.size} servers`, {
-     type: "STREAMING",
+     type: "WATCHING",
      url: "https://www.twitch.tv/chlkrisz"
     });
 });
@@ -21,12 +21,16 @@ client.on("message", async message => {
   const args = message.content.slice(config.prefix.length).trim().split(/ +/g);
   const command = args.shift().toLowerCase();
 
-if (message.includes('fasz')) {
- message.delete(); 
- message.author.send('A **fasz** szó csúnya szó! Elolvastad a szabályokat?')
+let blacklisted = ['fasz', 'geci', 'anyád', 'baszd', 'fika', 'köpedék', 'bazd']; // tiltott szavak
+let foundInText = false;
+for (var i in blacklisted) {
+  if (message.content.toLowerCase().icludes(blacklisted[i].toLowerCase())) foundInText = true; 
 }
   
-  
+if (foundInText) {
+ message.delete();
+ message.channel.reply('Elolvastad a szabályzatot?');
+}
 
   
 if(command === "help") {
