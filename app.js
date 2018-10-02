@@ -3,14 +3,12 @@ const client = new Discord.Client();
 const config = require("./config.json");
 const hook = new Discord.WebhookClient('496755807644287013', 'EyAHkCwQycVEdvm2UWtmkZ0JF8j7tHeTrzjaluQzGPHJEuTHHbhKcJEvI6oRrnouXF-o');
 
-hook.send('chlkrisz testing his webhook...')
-
 client.on("ready", () => {
   console.log(`Bot has started, with ${client.users.size} users, in ${client.channels.size} channels of ${client.guilds.size} guilds.`);
  // client.user.setActivity(`Serving ${client.guilds.size} servers`);
-    client.user.setStatus('dnd', '');
+    client.user.setStatus('idle', '');
     client.user.setActivity(`say !help | MANAGING ${client.guilds.size} servers`, {
-     type: "PLAYING",
+     type: "WATCHING",
      url: "https://www.twitch.tv/chlkrisz"
     });
 });
@@ -24,6 +22,13 @@ client.on("message", async message => {
   const args = message.content.slice(config.prefix.length).trim().split(/ +/g);
   const command = args.shift().toLowerCase();
 
+if(command === "hirek_say") {
+  message.delete()
+  const hir = new Discord.RichEmbed()
+  .setColor(0x954D23)
+  .setDescription("@everyone " + message.author.username + "hírként posztolta: " + args.join(" "))
+  hook.send({hir})
+}
   
 if(command === "help") {
   
