@@ -58,6 +58,11 @@ if(command === "ruleshere") {
                 icon_url: "http://users.atw.hu/kankutya/pictures/179386.png"
               },
               description: "Üdvözlünk a szerverünkön! Reméljük, hogy jól fogod magad érezni!\nViszont mint mindenhol, itt is vannak szabályok.",
+    fields: [{
+        name: "1. szabály",
+        value: "Ne beszélj csúnyán!\nNem szeretjük a csúnya beszédet, kérünk, te se beszélj csúnyán! :)"
+      }
+    ],
     footer: {
       text: "(c) SkyPVP Bot"
     }
