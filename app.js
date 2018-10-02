@@ -7,7 +7,7 @@ client.on("ready", () => {
  // client.user.setActivity(`Serving ${client.guilds.size} servers`);
     client.user.setStatus('idle', '');
     client.user.setActivity(`say !help | MANAGING ${client.guilds.size} servers`, {
-     type: "STREAMING",
+     type: "LISTENING",
      url: "https://www.twitch.tv/chlkrisz"
     });
 });
@@ -61,6 +61,10 @@ if(command === "ruleshere") {
     fields: [{
         name: "1. szabály",
         value: "Ne beszélj csúnyán!\nNem szeretjük a csúnya beszédet, kérünk, te se beszélj csúnyán! :)"
+      },
+    {
+        name: "2. szabály",
+        value: "Ne reklámozz szervereket!\nKérünk, hogy ne reklámozd a saját, vagy más szerverét!"
       }
     ],
     footer: {
