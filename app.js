@@ -21,17 +21,6 @@ client.on("message", async message => {
   const args = message.content.slice(config.prefix.length).trim().split(/ +/g);
   const command = args.shift().toLowerCase();
 
-let blacklisted = ['fasz', 'geci', 'anyád', 'baszd', 'fika', 'köpedék', 'bazd']; // tiltott szavak
-let foundInText = false;
-for (var i in blacklisted) {
-  if (message.content.toLowerCase().icludes(blacklisted[i].toLowerCase())) foundInText = true; 
-}
-  
-if (foundInText) {
- message.delete();
- message.channel.reply('Elolvastad a szabályzatot?');
-}
-
   
 if(command === "help") {
   
