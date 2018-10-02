@@ -7,7 +7,7 @@ client.on("ready", () => {
  // client.user.setActivity(`Serving ${client.guilds.size} servers`);
     client.user.setStatus('dnd', '');
     client.user.setActivity(`say !help | MANAGING ${client.guilds.size} servers`, {
-     type: "LISTENING",
+     type: "STREAMING",
      url: "https://www.twitch.tv/chlkrisz"
     });
 });
@@ -68,7 +68,7 @@ if(command === "ruleshere") {
     },   
     {
         name: "Jó szórakozást kívánunk!",
-        value: "Ha nem viselkedsz jól, /ban \:kappa_nitro:"
+        value: "Ha nem viselkedsz jól, /ban \:kappa:"
       } 
     ],
     
