@@ -59,15 +59,15 @@ if(command === "ruleshere") {
               description: "Üdvözlünk a szerverünkön! \:tada:\:hugging: Reméljük, hogy jól fogod magad érezni!\n\:exclamation: Viszont mint mindenhol, itt is vannak szabályok. \:exclamation:",
     fields: [{
         name: "1. szabály",
-        value: "Ne beszélj csúnyán!\nNem szeretjük a csúnya beszédet, kérünk, te se beszélj csúnyán! \:smiley:"
+        value: "**Ne beszélj csúnyán!**\nNem szeretjük a csúnya beszédet, kérünk, te se beszélj csúnyán! \:smiley:"
       },
     {
         name: "2. szabály",
-        value: "Ne reklámozz szervereket!\nKérünk, hogy ne reklámozd a saját, vagy más szerverét! \:wink:"
+        value: "**Ne reklámozz szervereket!**\nKérünk, hogy ne reklámozd a saját, vagy más szerverét! \:wink:"
       },
     {
         name: "3. szabály",
-        value: "Ne szidd a tagokat!\nA szidásban lehet csúnya beszéd, ezért talán még kettő szabályt is képes vagy egyszerre megszegni! \:open_mouth:"
+        value: "**Ne szidd a tagokat!**\nA szidásban lehet csúnya beszéd, ezért talán még kettő szabályt is képes vagy egyszerre megszegni! \:open_mouth:"
     },   
     {
         name: "Jó szórakozást kívánunk!",
