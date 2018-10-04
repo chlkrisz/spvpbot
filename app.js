@@ -92,17 +92,13 @@ if (command === "say") {
 }
   
 if (command === "say") {
- //!say asd
- //asd
- if(!message.member.hasPermission("MANAGE_MESSAGES")) return message.reply("nope.avi");
- let botmessage = args.join(" ");
- message.delete().catch();
- message.channel.send(botmessage);
+   if(!message.member.hasPermission("MANAGE_MESSAGES")) return message.reply("nope.avi");
+   let botmessage1 = args.join(" ");
+   message.delete().catch();
+   hook.send(botmessage1); 
 }
   
 if (command === "hirsay") {
-   //!hirsay asd
-   //asd
    if(!message.member.hasPermission("MANAGE_MESSAGES")) return message.reply("nope.avi");
    let botmessage2 = args.join(" ");
    message.delete().catch();
