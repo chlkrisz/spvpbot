@@ -1,6 +1,7 @@
 const Discord = require("discord.js");
 const client = new Discord.Client();
 const config = require("./config.json");
+
 const hook = new Discord.WebhookClient('496755807644287013', 'EyAHkCwQycVEdvm2UWtmkZ0JF8j7tHeTrzjaluQzGPHJEuTHHbhKcJEvI6oRrnouXF-o');
 const kozlobot = new Discord.WebhookClient('496760864649773076', 'EFjXuitcbd72JooAJPbYU6LXlAyfpMUeKGzm4j_7ffwm01yQC0nrdPoyWuB2ipxlFzd9');
 let kodolasalatt = "káromkodásszűrő";
@@ -24,13 +25,13 @@ client.on("message", async message => {
   if(message.author.bot) return;
 
   if(message.content.indexOf(config.prefix) !== 0) return;
-
+  var msg = message.content.toUpperCase();
   const args = message.content.slice(config.prefix.length).trim().split(/ +/g);
   const command = args.shift().toLowerCase();
   
-if(message.content === "fasz") {
- message.delete().catch(); 
- message.author.send("Na lámm! Valaki épp **megszegi a szabályzatot**?");
+if(msg.includes === "fasz") {
+ message.delete(); 
+ message.author.send("Na lámm, nézd csak! Valaki épp **megszegi a szabályzatot**?");
 }
   
 if(command === "help") {
