@@ -38,9 +38,13 @@ if(command === "help") {
               description: "Az összes parancs leírva!",
               fields:[
                 {
-                  name: "/help",
+                  name: "!help",
                   value: "Ez a panel. \:smile:"
                 },
+                {
+                  name: "!credits",
+                  value: "A bot készítőjét elküldni neked privát üzenetben. \:tada:"
+                true},
               ],
     timestamp: new Date(),
     footer: {
