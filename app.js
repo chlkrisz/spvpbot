@@ -35,7 +35,13 @@ if(command === "help") {
                 name: "Segítség | SkyPVP Bot",
                 icon_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Pictogram_voting_question.svg/220px-Pictogram_voting_question.svg.png"
               },
-              description: "Ez a panel kódolás alatt van!",
+              description: "Az összes parancs leírva!",
+              fields:[
+                {
+                  name: "/help",
+                  value: "Ez a panel. \:smile:"
+                },
+              ],
     timestamp: new Date(),
     footer: {
       icon_url: message.author.displayAvatarURL,
@@ -44,7 +50,7 @@ if(command === "help") {
   }
 });
             message.channel.stopTyping();
-        },200)
+        },1000)
   
 }
   
