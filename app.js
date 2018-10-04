@@ -83,19 +83,10 @@ if(command === "credits") {
 }
   
 if (command === "say") {
- //!say asd
- //asd
- if(!message.member.hasPermission("MANAGE_MESSAGES")) return message.reply("nope.avi");
- let botmessage1 = args.join(" ");
- message.delete().catch();
- message.channel.send(botmessage1);
-}
-  
-if (command === "say") {
    if(!message.member.hasPermission("MANAGE_MESSAGES")) return message.reply("nope.avi");
    let botmessage1 = args.join(" ");
    message.delete().catch();
-   hook.send(botmessage1); 
+   message.channel.send(botmessage1); 
 }
   
 if (command === "hirsay") {
@@ -139,6 +130,13 @@ if(command === "ruleshere") {
 });
    
    
+}
+  
+if(command === "mivankodolasalatt") {
+ message.delete().catch();
+ let kodolasalatt = "káromkodásszűrő";
+ message.channel.send("Jelenleg ez van kódolás alatt: " + kodolasalatt);
+  
 }
 if(command === "tre") {
         message.channel.startTyping();
