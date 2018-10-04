@@ -3,8 +3,11 @@ const client = new Discord.Client();
 const config = require("./config.json");
 const hook = new Discord.WebhookClient('496755807644287013', 'EyAHkCwQycVEdvm2UWtmkZ0JF8j7tHeTrzjaluQzGPHJEuTHHbhKcJEvI6oRrnouXF-o');
 const kozlobot = new Discord.WebhookClient('496760864649773076', 'EFjXuitcbd72JooAJPbYU6LXlAyfpMUeKGzm4j_7ffwm01yQC0nrdPoyWuB2ipxlFzd9');
+let kodolasalatt = "káromkodásszűrő";
 
 kozlobot.send ('A SkyPVP Bot sikeresen újra lett indítva! \:wink:')
+
+
 
 client.on("ready", () => {
   console.log(`Bot has started, with ${client.users.size} users, in ${client.channels.size} channels of ${client.guilds.size} guilds.`);
@@ -24,6 +27,11 @@ client.on("message", async message => {
 
   const args = message.content.slice(config.prefix.length).trim().split(/ +/g);
   const command = args.shift().toLowerCase();
+  
+if(message.content === "fasz") {
+ message.delete().catch(); 
+ message.author.send("Na lámm! Valaki épp **megszegi a szabályzatot**?");
+}
   
 if(command === "help") {
   
@@ -134,7 +142,6 @@ if(command === "ruleshere") {
   
 if(command === "mivankodolasalatt") {
  message.delete().catch();
- let kodolasalatt = "káromkodásszűrő";
  message.channel.send("Jelenleg ez van kódolás alatt: " + kodolasalatt);
   
 }
