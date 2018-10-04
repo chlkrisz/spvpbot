@@ -44,7 +44,7 @@ if(command === "help") {
                 {
                   name: "!credits",
                   value: "A bot készítőjét elküldni neked privát üzenetben. \:tada:"
-                true},
+                },
               ],
     timestamp: new Date(),
     footer: {
