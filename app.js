@@ -20,6 +20,11 @@ client.on("ready", () => {
     });
 });
 
+module.exports.run = async (bot, message, args)  => {
+ if(message.author.bot) return; 
+ message.react('👍');
+}
+
 client.on("message", async message => {
 
   if(message.author.bot) return;
