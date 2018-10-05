@@ -29,11 +29,6 @@ client.on("message", async message => {
   const args = message.content.slice(config.prefix.length).trim().split(/ +/g);
   const command = args.shift().toLowerCase();
   
-if(msg.includes === "fasz") {
- message.delete(); 
- message.author.send("Na lámm, nézd csak! Valaki épp **megszegi a szabályzatot**?");
-}
-  
 if(command === "help") {
   
         message.channel.startTyping();
@@ -96,14 +91,6 @@ if (command === "say") {
    let botmessage1 = args.join(" ");
    message.delete().catch();
    message.channel.send(botmessage1); 
-}
-  
-if (command === "react") {
- message.channel.send("Chlkrisz a szerver tulajdonosa?")
-            .then(function (message) {
-              message.react("👍")
-              message.react("👎")
- }
 }
   
 if (command === "hirsay") {
