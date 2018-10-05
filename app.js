@@ -7,7 +7,7 @@ const kozlobot = new Discord.WebhookClient('496760864649773076', 'EFjXuitcbd72Jo
 let kodolasalatt = "káromkodásszűrő";
 
 kozlobot.send ('A SkyPVP Bot sikeresen újra lett indítva! \:wink:')
-
+kozlobot.send ('blablabla \:tada:')
 
 
 client.on("ready", () => {
