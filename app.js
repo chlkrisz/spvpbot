@@ -11,7 +11,7 @@ kozlobot.send ('A SkyPVP Bot sikeresen újra lett indítva! \:wink:')
 
 
 client.on("ready", () => {
-  console.log(`Bot has started, with ${client.users.size} users, in ${client.channels.size} channels of ${client.guilds.size} guilds.`);
+  console.log('Készen állok, te$$');
  // client.user.setActivity(`Serving ${client.guilds.size} servers`);
     client.user.setStatus('idle', '');
     client.user.setActivity(`say !help | MANAGING ${client.guilds.size} servers`, {
