@@ -98,6 +98,14 @@ if (command === "say") {
    message.channel.send(botmessage1); 
 }
   
+if (command === "react") {
+ message.channel.send("Chlkrisz a szerver tulajdonosa?")
+            .then(function (message) {
+              message.react("👍")
+              message.react("👎")
+ }
+}
+  
 if (command === "hirsay") {
    if(!message.member.hasPermission("MANAGE_MESSAGES")) return message.reply("nope.avi");
    let botmessage2 = args.join(" ");
