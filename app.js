@@ -23,7 +23,7 @@ client.on("message", async message => {
 
   if(message.author.bot) return;
   
-  if(message.contains === "ogreszem") {
+  if(message.includes === "ogreszem") {
      message.delete().catch();
   }
   if(message.content.indexOf(config.prefix) !== 0) return;
