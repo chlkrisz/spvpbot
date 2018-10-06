@@ -10,7 +10,7 @@ kozlobot.send ('A SkyPVP Bot sikeresen újra lett indítva! \:wink: \:tada:')
 
 
 client.on("ready", () => {
-  console.log('Készen állok, te$$');
+  console.log('nagykutya69');
  // client.user.setActivity(`Serving ${client.guilds.size} servers`);
     client.user.setStatus('idle', '');
     client.user.setActivity(`say !help | MANAGING ${client.guilds.size} servers`, {
