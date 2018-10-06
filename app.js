@@ -6,28 +6,26 @@ const hook = new Discord.WebhookClient('496755807644287013', 'EyAHkCwQycVEdvm2UW
 const kozlobot = new Discord.WebhookClient('496760864649773076', 'EFjXuitcbd72JooAJPbYU6LXlAyfpMUeKGzm4j_7ffwm01yQC0nrdPoyWuB2ipxlFzd9');
 let kodolasalatt = "káromkodásszűrő";
 
-kozlobot.send ('A SkyPVP Bot sikeresen újra lett indítva! \:wink: \:tada:')
+kozlobot.send ('A SkyPVP Bot sikeresen újra lett indítva! \:wink: \:tada: \:smiley:')
 
 
 client.on("ready", () => {
   console.log('nagykutya69');
  // client.user.setActivity(`Serving ${client.guilds.size} servers`);
     client.user.setStatus('idle', '');
-    client.user.setActivity(`say !help | MANAGING ${client.guilds.size} servers`, {
+    client.user.setActivity(`say !help | MANAGING ${client.guilds.size} server(s)`, {
      type: "STREAMING",
      url: "https://www.twitch.tv/chlkrisz"
     });
 });
 
-module.exports.run = async (bot, message, args)  => {
- if(message.author.bot) return; 
- message.react('👍');
-}
-
 client.on("message", async message => {
 
   if(message.author.bot) return;
-
+  
+  if(message.contains === "ogreszem") {
+     message.delete().catch();
+  }
   if(message.content.indexOf(config.prefix) !== 0) return;
   const msg = message.content.toUpperCase();
   const args = message.content.slice(config.prefix.length).trim().split(/ +/g);
