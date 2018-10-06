@@ -69,6 +69,25 @@ if(command === "test") {
  message.channel.send("Teszt!");
 }
   
+if(command === "credits-eng") {
+ message.delete().catch;
+ message.author.send({embed: {
+             color: 3447003,
+             author: {
+                name: "Creator",
+                icon_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Pictogram_voting_question.svg/220px-Pictogram_voting_question.svg.png"
+              },
+              description: "Chlkrisz#1820",
+    timestamp: new Date(),
+    footer: {
+      icon_url: message.author.displayAvatarURL,
+      text: "Requested by you."
+    }
+  }
+})
+  
+}
+  
 if(command === "credits") {
  message.delete().catch;
  message.author.send({embed: {
@@ -81,7 +100,7 @@ if(command === "credits") {
     timestamp: new Date(),
     footer: {
       icon_url: message.author.displayAvatarURL,
-      text: "Te kérted. \:smile:"
+      text: "Te kérted."
     }
   }
 })
