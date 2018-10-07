@@ -30,6 +30,41 @@ client.on("message", async message => {
   const msg = message.content.toUpperCase();
   const args = message.content.slice(config.prefix.length).trim().split(/ +/g);
   const command = args.shift().toLowerCase();
+
+if(command === "help-en") {
+  
+        message.channel.startTyping();
+        setTimeout(()=>{
+            message.channel.send({embed: {
+             color: 3447003,
+             author: {
+                name: "Help | SkyPVP Bot \:flag_us:",
+                icon_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Pictogram_voting_question.svg/220px-Pictogram_voting_question.svg.png"
+              },
+              description: "All the commands are described!",
+              fields:[
+                {
+                  name: "!help",
+                  value: "This. \:smile:"
+                },
+                {
+                  name: "!credits",
+                  value: "It describes the bot's creator in a private message for you. \:tada:"
+                },
+              ],
+    timestamp: new Date(),
+    footer: {
+      icon_url: message.author.displayAvatarURL,
+      text: "Requested by " + message.author.username
+    }
+  }
+});
+            message.channel.stopTyping();
+        },1000)
+  
+}
+  
+  
   
 if(command === "help") {
   
@@ -38,7 +73,7 @@ if(command === "help") {
             message.channel.send({embed: {
              color: 3447003,
              author: {
-                name: "Segítség | SkyPVP Bot",
+                name: "Segítség | SkyPVP Bot \:flag_hu:",
                 icon_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Pictogram_voting_question.svg/220px-Pictogram_voting_question.svg.png"
               },
               description: "Az összes parancs leírva!",
