@@ -12,7 +12,7 @@ client.on("ready", () => {
   console.log('nagykutya69');
  // client.user.setActivity(`Serving ${client.guilds.size} servers`);
     client.user.setStatus('idle', '');
-    client.user.setActivity(`say !help | MANAGING ${client.guilds.size} server(s)`, {
+    client.user.setActivity(`say !help/!help-en| MANAGING ${client.guilds.size} server(s)`, {
      type: "STREAMING",
      url: "https://www.twitch.tv/chlkrisz"
     });
