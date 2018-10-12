@@ -8,7 +8,6 @@ let kodolasalatt = "káromkodásszűrő";
 
 kozlobot.send ('A SkyPVP Bot sikeresen újra lett indítva! \:wink: \:tada: \:smiley:')
 
-
 client.on("ready", () => {
   console.log('nagykutya69');
  // client.user.setActivity(`Serving ${client.guilds.size} servers`);
@@ -38,17 +37,17 @@ if(command === "help-en") {
             message.channel.send({embed: {
              color: 3447003,
              author: {
-                name: "Help | SkyPVP Bot \:flag_us:",
+                name: "Help | SkyPVP Bot \:flag_gb:",
                 icon_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Pictogram_voting_question.svg/220px-Pictogram_voting_question.svg.png"
               },
               description: "All the commands are described!",
               fields:[
                 {
-                  name: "!help",
+                  name: "!help-en",
                   value: "This. \:smile:"
                 },
                 {
-                  name: "!credits",
+                  name: "!credits-en",
                   value: "It describes the bot's creator in a private message for you. \:tada:"
                 },
               ],
@@ -104,7 +103,7 @@ if(command === "test") {
  message.channel.send("Teszt!");
 }
   
-if(command === "credits-eng") {
+if(command === "credits-en") {
  message.delete().catch;
  message.author.send({embed: {
              color: 3447003,
