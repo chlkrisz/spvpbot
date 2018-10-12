@@ -13,7 +13,7 @@ kozlobot.send ('A SkyPVP Bot sikeresen újra lett indítva! \:wink: \:tada: \:sm
 client.on("ready", () => {
   console.log('nagykutya69');
  // client.user.setActivity(`Serving ${client.guilds.size} servers`);
-    client.user.setStatus('idle', '');
+    client.user.setStatus('dnd', '');
     client.user.setActivity(`say !help/!help-en | MANAGING ${client.guilds.size} server(s)`, {
      type: "WATCHING",
      url: "https://www.twitch.tv/chlkrisz"
@@ -201,9 +201,9 @@ if(command === "mivankodolasalatt") {
 if(command === "tre") {
         message.channel.startTyping();
         setTimeout(()=>{
-            message.channel.send("Testing to ForeverTyping!");
+            message.channel.send("asd");
             message.channel.stopTyping();
-        },2000)
+        },4000)
 }
 });
   client.login(config.token);
