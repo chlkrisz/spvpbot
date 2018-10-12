@@ -39,7 +39,7 @@ if(command === "help-en") {
             message.channel.send({embed: {
              color: 3447003,
              author: {
-                name: "Help | SkyPVP Bot \:flag_gb:",
+                name: "Help | SkyPVP Bot 🇬🇧",
                 icon_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Pictogram_voting_question.svg/220px-Pictogram_voting_question.svg.png"
               },
               description: "All the commands are described!",
@@ -74,7 +74,7 @@ if(command === "help") {
             message.channel.send({embed: {
              color: 3447003,
              author: {
-                name: "Segítség | SkyPVP Bot \:flag_hu:",
+                name: "Segítség | SkyPVP Bot 🇭🇺",
                 icon_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Pictogram_voting_question.svg/220px-Pictogram_voting_question.svg.png"
               },
               description: "Az összes parancs leírva!",
