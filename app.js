@@ -4,6 +4,24 @@ const config = require("./config.json");
 
 // Hey! This is MY BOT! Please DON'T STOLE MY BOT'S TOKEN! Thanks! :) //
 
+const fs = require("fs");
+client.commands = new Discord.Collection();
+
+fs.readdir("./commands/", (err, files) => {
+  if(err) console.error(err);
+  let jsfiles = files.filter(f => f.split(".").pop() === "js");
+  if(jsfiles.length <= 0) {
+   console.log("No commands to load!");
+   return;
+  }
+  console.log(`Loading ${jsfiles.length} commands!`);
+  jsfiles.forEach((f, i) => {
+    let props = require(`./commands/$(f)`);
+    console.log(`${i + 1}: ${f} loaded!`);
+    client.commands.set(props.help.name, props); 
+  });
+});
+
 const hook = new Discord.WebhookClient('496755807644287013', 'EyAHkCwQycVEdvm2UWtmkZ0JF8j7tHeTrzjaluQzGPHJEuTHHbhKcJEvI6oRrnouXF-o');
 const kozlobot = new Discord.WebhookClient('496760864649773076', 'EFjXuitcbd72JooAJPbYU6LXlAyfpMUeKGzm4j_7ffwm01yQC0nrdPoyWuB2ipxlFzd9');
 let kodolasalatt = "káromkodásszűrő";
