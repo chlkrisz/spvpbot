@@ -1,6 +1,24 @@
 const Discord = require("discord.js");
 const client = new Discord.Client();
 const config = require("./config.json");
+const fs = require("fs");
+
+fs.readdir("./commands/", (err, files) => {
+  if(err) console.error(err);
+  
+  let jsfiles = files.filter(f => f.split(".").pop() === "js");
+  if(jsfiles.length <= 0) {
+   console.log("Nincs semmi parancs itt: /commands/");
+   return;
+  }
+  console.log(`Loading ${jsfiles.length} commands...`);
+  
+  jsfiles.forEach((f, i) => {
+    let props = require(`./commands/${f}`);
+    console.log(`$(i + 1): ${f} loaded!`)
+    client.commands.set(f, props);
+  });
+});
 
 // Hey! This is MY BOT! Please DON'T STOLE MY BOT'S TOKEN! Thanks! :) //
 
