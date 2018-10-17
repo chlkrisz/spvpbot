@@ -20,6 +20,13 @@ client.on("ready", () => {
     });
 });
 
+client.on('guildMemberAdd', member => {
+  let channel = member.guild.channels.find('name', 'értesítések');
+  channel.sendMessage('${member} is megjött!');
+  
+  
+});
+
 client.on("message", async message => {
 
   if(message.author.bot) return;
