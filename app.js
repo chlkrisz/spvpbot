@@ -163,23 +163,6 @@ if (command === "say") {
    message.channel.send(botmessage1); 
 }
   
-if (command === "addrole") {
-  if(!message.member.hasPermission("MANAGE_MESSAGES")) return message.reply("nope.avi");
-  let rMember = message.guild.member(message.mentions.users.first()) || message.guild.members.get(args[0]);
-  if(!rMember) return message.reply("Nem találom őt, te$$");
-  let role = args.join(" ").slice(22);
-  if(!role) return message.reply("Mondjá' már egy rangot, te$$!");
-  let gRole = message.guild.roles.find('name', role);
-  if (!gRole) return message.reply("Ezt nem találom. Elírtad?");
-  
-  if (rMember.roles.has(gRole.id));
-  await(rMember.addRole(gRole.id));
-  
-  try{
-   message.channel.send('Sikeres volt a művelet! \:smiley:') 
-  }
-}
-  
 if (command === "hirsay") {
    if(!message.member.hasPermission("MANAGE_MESSAGES")) return message.reply("nope.avi");
    let botmessage2 = args.join(" ");
