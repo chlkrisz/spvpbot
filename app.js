@@ -38,7 +38,6 @@ let censor = "[Sorry, I Swear]"; /* Replace this with what you want */
 client.on('message', message => {
     let edit = message.content.replace(/asshole/gi, censor);
     message.delete();
-    message.channel.send(`${message.author.username}: ${edit}`);
 });
 
 client.on("message", async message => {
