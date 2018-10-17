@@ -22,7 +22,7 @@ client.on("ready", () => {
 
 client.on('guildMemberAdd', member => {
   let channel = member.guild.channels.find('name', 'értesítések');
-  channel.sendMessage('${member} is megjött!');
+  channel.sendMessage(`${member.username} is megjött!`);
   
   
 });
