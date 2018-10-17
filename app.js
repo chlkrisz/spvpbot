@@ -38,9 +38,6 @@ client.on("message", async message => {
 
   if(message.author.bot) return;
   
-  if(message.includes === "ogreszem") {
-     message.delete().catch();
-  };
   if(message.content.indexOf(config.prefix) !== 0) return;
   const msg = message.content.toUpperCase();
   const args = message.content.slice(config.prefix.length).trim().split(/ +/g);
@@ -51,7 +48,7 @@ if(command === "help-en") {
         message.channel.startTyping();
         setTimeout(()=>{
             message.channel.send({embed: {
-             color: 3447003,
+             color: RANDOM,
              author: {
                 name: "Help | SkyPVP Bot 🇬🇧",
                 icon_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Pictogram_voting_question.svg/220px-Pictogram_voting_question.svg.png"
@@ -86,7 +83,7 @@ if(command === "help") {
         message.channel.startTyping();
         setTimeout(()=>{
             message.channel.send({embed: {
-             color: 3447003,
+             color: RANDOM,
              author: {
                 name: "Segítség | SkyPVP Bot 🇭🇺",
                 icon_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Pictogram_voting_question.svg/220px-Pictogram_voting_question.svg.png"
@@ -122,7 +119,7 @@ if(command === "test") {
 if(command === "credits-en") {
  message.delete().catch;
  message.author.send({embed: {
-             color: 3447003,
+             color: RANDOM,
              author: {
                 name: "Creator",
                 icon_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Pictogram_voting_question.svg/220px-Pictogram_voting_question.svg.png"
@@ -141,7 +138,7 @@ if(command === "credits-en") {
 if(command === "credits") {
  message.delete().catch;
  message.author.send({embed: {
-             color: 3447003,
+             color: RANDOM,
              author: {
                 name: "Készítő",
                 icon_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Pictogram_voting_question.svg/220px-Pictogram_voting_question.svg.png"
