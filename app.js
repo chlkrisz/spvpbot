@@ -48,7 +48,7 @@ if(command === "help-en") {
         message.channel.startTyping();
         setTimeout(()=>{
             message.channel.send({embed: {
-             color: RANDOM,
+             color: Math.floor(Math.random() * 16777214) + 1,
              author: {
                 name: "Help | SkyPVP Bot 🇬🇧",
                 icon_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Pictogram_voting_question.svg/220px-Pictogram_voting_question.svg.png"
@@ -83,7 +83,7 @@ if(command === "help") {
         message.channel.startTyping();
         setTimeout(()=>{
             message.channel.send({embed: {
-             color: RANDOM,
+             color: Math.floor(Math.random() * 16777214) + 1,
              author: {
                 name: "Segítség | SkyPVP Bot 🇭🇺",
                 icon_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Pictogram_voting_question.svg/220px-Pictogram_voting_question.svg.png"
@@ -119,7 +119,7 @@ if(command === "test") {
 if(command === "credits-en") {
  message.delete().catch;
  message.author.send({embed: {
-             color: RANDOM,
+             color: Math.floor(Math.random() * 16777214) + 1,
              author: {
                 name: "Creator",
                 icon_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Pictogram_voting_question.svg/220px-Pictogram_voting_question.svg.png"
@@ -138,7 +138,7 @@ if(command === "credits-en") {
 if(command === "credits") {
  message.delete().catch;
  message.author.send({embed: {
-             color: RANDOM,
+             color: Math.floor(Math.random() * 16777214) + 1,
              author: {
                 name: "Készítő",
                 icon_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Pictogram_voting_question.svg/220px-Pictogram_voting_question.svg.png"
