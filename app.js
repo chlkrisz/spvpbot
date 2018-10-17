@@ -5,7 +5,7 @@ const config = require("./config.json");
 // Hey! This is MY BOT! Please DON'T STOLE MY BOT'S TOKEN! Thanks! :) //
 
 const fs = require("fs");
-const client.commands = new Discord.Collection();
+let client.commands = new Discord.Collection();
 
 fs.readdir("./commands/", (err, files) => {
   if(err) console.error(err);
