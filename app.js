@@ -34,6 +34,12 @@ client.on('guildMemberRemove', member => {
   member.sendMessage('Miért mentél el? :c');
 });
 
+client.on('message', message => {
+    message.edit(message.content.replace(/asshole/gi, "[I'm stupid because I swear]"))
+       .then(msg => console.log(`Updated the content of a message from ${msg.author}`))
+       .catch(console.error);
+});
+
 client.on("message", async message => {
 
   if(message.author.bot) return;
