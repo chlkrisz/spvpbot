@@ -27,6 +27,13 @@ client.on('guildMemberAdd', member => {
   
 });
 
+client.on('guildMemberRemove', member => {
+  let channel = member.guild.channels.find('name', 'értesítések');
+  channel.sendMessage(`${member} elment! -1 ember :c`);
+  
+  
+});
+
 client.on("message", async message => {
 
   if(message.author.bot) return;
