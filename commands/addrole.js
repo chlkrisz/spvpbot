@@ -12,10 +12,6 @@ module.exports.run = async (bot, message, args) => {
   
   if (rMember.roles.has(gRole.id));
   await(rMember.addRole(gRole.id));
-  
-  try{
-   message.channel.send('Sikeres volt a művelet! \:smiley:') 
-  }
 }
 
 module.exports.help = {
