@@ -5,20 +5,21 @@ const config = require("./config.json");
 // Hey! This is MY BOT! Please DON'T STOLE MY BOT'S TOKEN! Thanks! :) //
 
 const fs = require("fs");
-client.commands = new Discord.Collection();
+
+
+client.commands = new Enmap();
 
 fs.readdir("./commands/", (err, files) => {
-  if(err) console.error(err);
-  let jsfiles = files.filter(f => f.split(".").pop() === "js");
-  if(jsfiles.length <= 0) {
-   console.log("No commands to load!");
-   return;
-  };
-  console.log(`Loading ${jsfiles.length} commands!`);
-  jsfiles.forEach((f, i) => {
-    let props = require(`./commands/$(f)`);
-    console.log(`${i + 1}: ${f} loaded!`);
-    client.commands.set(props.help.name, props); 
+  if (err) return console.error(err);
+  files.forEach(file => {
+    if (!file.endsWith(".js")) return;
+    // Load the command file itself
+    let props = require(`./commands/${file}`);
+    // Get just the command name from the file name
+    let commandName = file.split(".")[0];
+    console.log(`Attempting to load command ${commandName}`);
+    // Here we simply store the whole thing in the command Enmap. We're not running it right now.
+    client.commands.set(commandName, props);
   });
 });
 
