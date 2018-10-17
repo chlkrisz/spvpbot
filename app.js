@@ -23,14 +23,13 @@ client.on("ready", () => {
 client.on('guildMemberAdd', member => {
   let channel = member.guild.channels.find('name', 'értesítések');
   channel.sendMessage(`${member} is megjött!`);
-  
+  member.addRole(member.guild.roles.find('name', 'Member'));
   
 });
 
 client.on('guildMemberRemove', member => {
   let channel = member.guild.channels.find('name', 'értesítések');
   channel.sendMessage(`${member} elment! -1 ember :c`);
-  
   
 });
 
