@@ -1,14 +1,13 @@
 const Discord = require("discord.js");
 const client = new Discord.Client();
 const config = require("./config.json");
+const hook = new Discord.WebhookClient('496755807644287013', 'EyAHkCwQycVEdvm2UWtmkZ0JF8j7tHeTrzjaluQzGPHJEuTHHbhKcJEvI6oRrnouXF-o');
+const kozlobot = new Discord.WebhookClient('496760864649773076', 'EFjXuitcbd72JooAJPbYU6LXlAyfpMUeKGzm4j_7ffwm01yQC0nrdPoyWuB2ipxlFzd9');
+let kodolasalatt = "káromkodásszűrő";
 
 // Hey! This is MY BOT! Please DON'T STOLE MY BOT'S TOKEN! Thanks! :) //
 
 
-
-const hook = new Discord.WebhookClient('496755807644287013', 'EyAHkCwQycVEdvm2UWtmkZ0JF8j7tHeTrzjaluQzGPHJEuTHHbhKcJEvI6oRrnouXF-o');
-const kozlobot = new Discord.WebhookClient('496760864649773076', 'EFjXuitcbd72JooAJPbYU6LXlAyfpMUeKGzm4j_7ffwm01yQC0nrdPoyWuB2ipxlFzd9');
-let kodolasalatt = "káromkodásszűrő";
 
 kozlobot.send ('A SkyPVP Bot sikeresen újra lett indítva! \:wink: \:tada: \:smiley:')
 
@@ -41,7 +40,7 @@ client.on("message", async message => {
   
   if(message.includes === "ogreszem") {
      message.delete().catch();
-  }
+  };
   if(message.content.indexOf(config.prefix) !== 0) return;
   const msg = message.content.toUpperCase();
   const args = message.content.slice(config.prefix.length).trim().split(/ +/g);
