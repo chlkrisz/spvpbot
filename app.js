@@ -34,11 +34,12 @@ client.on('guildMemberRemove', member => {
   member.sendMessage('Miért mentél el? :c');
 });
 
+let censor = "[Sorry, I Swear]"; /* Replace this with what you want */
 client.on('message', message => {
-    message.edit(message.content.replace(/asshole/gi, "[I'm stupid because I swear]"))
-       .then(msg => console.log(`Updated the content of a message from ${msg.author}`))
-       .catch(console.error);
-});
+    let edit = message.content.replace(/asshole/gi, censor);
+    message.delete();
+    message.channel.send(`${message.author.username}: ${edit}`);
+}
 
 client.on("message", async message => {
 
