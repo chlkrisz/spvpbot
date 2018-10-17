@@ -17,3 +17,7 @@ module.exports.run = async (bot, message, args) => {
    message.channel.send('Sikeres volt a művelet! \:smiley:') 
   }
 }
+
+module.exports.help = {
+ name: "addrole" 
+}
