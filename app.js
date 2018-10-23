@@ -75,6 +75,10 @@ if(command === "help-en") {
                   name: "!credits-en",
                   value: "It describes the bot's creator in a private message for you. \:tada:"
                 },
+                {
+                 name: "!ping", 
+                 value: "Ping? Pong!"
+                },
               ],
     timestamp: new Date(),
     footer: {
@@ -124,6 +128,10 @@ if(command === "help") {
                 {
                  name: "!joskagyerek", 
                  value: "Na mi van Jóska gyerek? Most pofázzá'!"
+                },
+                {
+                 name: "!ping", 
+                 value: "Ping? Pong!"
                 },
               ],
     timestamp: new Date(),
