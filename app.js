@@ -216,6 +216,11 @@ if(command === "ruleshere") {
    
 }
   
+if(command === "joskagyerek") {
+ message.delete().catch() 
+ message.channel.send("Penészes bundáskenyér!")
+}
+  
 if(command === "mivankodolasalatt") {
  message.delete().catch();
  message.channel.send("Jelenleg ez van kódolás alatt: " + kodolasalatt);
