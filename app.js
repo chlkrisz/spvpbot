@@ -46,6 +46,15 @@ client.on("message", async message => {
   const args = message.content.slice(config.prefix.length).trim().split(/ +/g);
   const command = args.shift().toLowerCase();
 
+if(command === "nemtudom") {
+ message.channel.send("Én se Janikám!") 
+  
+}
+  
+  
+  
+  
+  
 if(command === "help-en") {
   
         message.channel.startTyping();
