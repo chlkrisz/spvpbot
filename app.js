@@ -110,6 +110,14 @@ if(command === "help") {
                   name: "!credits",
                   value: "A bot készítőjét elküldni neked privát üzenetben. \:tada:"
                 },
+                {
+                 name: "!nemtudom",
+                 value: "Nem tudom! \:smile:"
+                },
+                {
+                 name: "!joskagyerek", 
+                 value: "Na mi van Jóska gyerek? Most pofázzá'!"
+                },
               ],
     timestamp: new Date(),
     footer: {
